@@ -16,14 +16,16 @@ find_game_window("Game")
 ### 2. Chụp màn hình để phân tích
 
 ```python
-# Chụp màn hình hiện tại
+# Chụp màn hình hiện tại (chỉ cửa sổ game)
 capture_game_screen()
 ```
 
 AI sẽ nhận được:
-- Screenshot dưới dạng base64
+
+- Đường dẫn file ảnh đã lưu
 - Thông tin cửa sổ game
 - Kích thước hình ảnh
+- Đường dẫn tuyệt đối để đọc ảnh
 
 ### 3. Phân tích và click
 
@@ -82,18 +84,33 @@ wait_and_capture(delay=8.0)
 ## Các tool hỗ trợ
 
 ### Liệt kê tất cả cửa sổ
+
 ```python
 list_all_windows()
 ```
 
 ### Lấy thông tin cửa sổ hiện tại
+
 ```python
 get_window_info()
 ```
 
 ### Lấy screenshot cuối cùng
+
 ```python
 get_last_screenshot()
+```
+
+### Liệt kê tất cả screenshots
+
+```python
+list_screenshots()
+```
+
+### Xóa tất cả screenshots
+
+```python
+clear_screenshots()
 ```
 
 ## Tips cho AI
@@ -107,6 +124,7 @@ get_last_screenshot()
 ## Xử lý lỗi
 
 Tất cả tools đều trả về format:
+
 ```json
 {
   "success": true/false,

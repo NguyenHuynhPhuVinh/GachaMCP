@@ -7,9 +7,15 @@ pygetwindow>=0.0.9
 Pillow>=10.0.0
 mss>=9.0.1
 
-# Image processing
+# Image processing and computer vision
 opencv-python>=4.8.0
 numpy>=1.24.0
+pytesseract>=0.3.10
+easyocr>=1.7.0
+
+# Template matching and feature detection
+scikit-image>=0.21.0
+imutils>=0.5.4
 
 # Utilities
 pydantic>=2.0.0
